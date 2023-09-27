@@ -1,0 +1,68 @@
+/* h1 {
+  color: white;
+  background-color: black;
+}
+
+#paragraphId {
+  color: red;
+  background-color: blue;
+}
+
+.paragraph {
+  color: blue;
+  background-color: red;
+} */
+
+/* .green-color {
+  color: green;
+  background-color: black;
+} */
+
+/* h1,
+p {
+  color: blue;
+  background-color: red;
+} */
+
+/* * { */
+/* color: brown; */
+/* HEX */
+/* Red Green Blue */
+/* color: #ffffff;
+  background-color: #000000; */
+/* RGB */
+/* color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255); */
+/* RGBA */
+/* color: rgba(255, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5); */
+/* } */
+/* This is a comment
+Multiline comment
+*/
+
+h1 {
+  /* border-style: solid dashed dotted double; */
+  /* border-width: 10px 8px 3px 5px; */
+  /* border-width: 10px 8px 5px; */
+  /* border-width: 10px 5px; */
+  /* border-width: 5px; */
+  /* border-color: red green blue black; */
+  /* border-radius: 0 0 0 10px; */
+  border: 2px solid red;
+  /* padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px; */
+  padding: 20px 5px 10px 2px;
+  /* margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px; */
+  margin: 50px 20px 10px 5px;
+}
+
+p {
+  border: 2px solid red;
+  margin: 20px 15px 10px 5px;
+}
