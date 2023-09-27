@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-4</title>
+  </head>
+  <body>
+    <div style="color: green">
+      <h1 title="This is a 'title'" style="border: 2px solid red">
+        This is a heading
+      </h1>
+
+      <p>This is a pargraph</p>
+    </div>
+
+    <nav>
+      <a href="./about-us.html" target="_blank" style="border: 2px solid black"
+        >About us</a
+      >
+      <a href="https://google.com/" target="_top">Visit google</a>
+    </nav>
+
+    <!-- Link -->
+
+    <!-- List -->
+    <ul style="list-style-type: circle">
+      <li>Apple</li>
+      <li>Ball</li>
+      <li>Cat</li>
+    </ul>
+
+    <ol type="a" start="50">
+      <li>Apple</li>
+      <li>Ball</li>
+      <li>Cat</li>
+    </ol>
+
+    <!-- Iframe -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/gmSzy0PitWQ?si=o1vC9dk1_79heaZi"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
+    <iframe src="./about-us.html" width="500" height="500"></iframe>
+
+    <!-- Semantic vs Non-semantic -->
+
+    <!-- Video -->
+    <video controls width="500" height="500" autoplay muted>
+      <source src="./video-1.webm" />
+    </video>
+    <video controls width="500" height="500" autoplay muted>
+      <source
+        src="https://player.vimeo.com/external/284652268.sd.mp4?s=0bf23f0d69280b20e39fb2dd5501a5b0d4612a77&profile_id=164&oauth2_token_id=57447761"
+      />
+    </video>
+
+    <!-- Audio -->
+    <audio controls>
+      <source src="./audio-1.mp3" />
+    </audio>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>20</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>20</td>
+          <td>Female</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Saving</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$300</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Sum</td>
+          <td>$500</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p>500 &lt; 200</p>
+    <p>&pound; 500 &forall; &#8704;</p>
+
+    <form action="./about-us.html" method="get">
+      <label for="fullName">Full name</label>
+      <input
+        id="fullName"
+        type="text"
+        placeholder="Name"
+        name="fullName"
+        value="John Doe"
+        required
+        readonly
+      />
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="example@gmail.com"
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        placeholder="password"
+        required
+      />
+      <!-- <input type="number" min="1" max="10" /> -->
+
+      <!-- <select>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <label>Gender</label>
+      <input type="radio">Male</input>
+      <input type="radio">Female</input> -->
+
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
