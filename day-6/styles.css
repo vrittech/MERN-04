@@ -1,0 +1,87 @@
+div {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  border: 2px solid green;
+  height: 200px;
+}
+
+h1 {
+  /* color: red; */
+  /* text-align: center; */
+  /* direction: rtl; */
+  /* text-decoration-line: line-through;
+  text-decoration-color: red;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 10px; */
+  /* text-decoration: underline blue solid 5px; */
+  border: 2px solid rebeccapurple;
+  /* height: 500px;
+  width: 100px;
+  overflow: visible; */
+  /* background-color: blueviolet;
+  background-image: url("./image-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; */
+  /* background: blue url("./image-1.jpg") no-repeat left; */
+  font-size: 50px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  /* float: left; */
+  /* display: none; */
+  /* visibility: hidden; */
+  /* position: absolute;
+  top: 50px;
+  left: 50px; */
+  /* position: relative;
+  left: 10%; */
+}
+
+p {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  position: sticky;
+  top: 0;
+  display: inline-block;
+  /* width: 200px;
+  height: 100px; */
+  color: black;
+  text-decoration: none;
+  background-color: blue;
+  z-index: 1;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  color: green;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  /* list-style-image: url("./smile.png"); */
+}
+
+li {
+  border: 1px solid green;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.overflow-example {
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+  clear: left;
+}
