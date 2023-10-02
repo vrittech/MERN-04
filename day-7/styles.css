@@ -1,0 +1,157 @@
+.abc {
+  color: blue;
+  font-size: 40px;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.aba {
+  color: blue;
+  font-size: 40px;
+  width: 200px;
+  height: 200px;
+  /* padding: 5px; */
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+/* 
+Actual width = 200 + 5 * 2 + 2 * 2 = 200 + 10 + 4 = 214px;
+Border box
+Content width = 200 - 5 * 2 - 2 * 2 = 200 - 10 -4 = 186px;
+Element = 200px;
+*/
+
+/* div p {
+  color: green;
+} */
+
+/* div > p {
+  color: blue;
+} */
+
+/* div + p {
+  color: red;
+} */
+
+/* div ~ p {
+  color: red;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px 100px 100px;
+  /* justify-content: space-between;
+  align-content: center; */
+  /* height: 800px; */
+  /* border: 1px solid red; */
+  /* column-gap: 20px;
+  row-gap: 20px; */
+  /* gap: 10px 30px; */
+}
+
+.item {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: aqua;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.item-1 {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: blueviolet;
+  font-size: 20px;
+  font-weight: 600;
+  /* grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+  /* grid-column: 1 / span 3;
+  grid-row: 1 / span 3; */
+}
+
+.item-2 {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: blanchedalmond;
+  font-size: 20px;
+  font-weight: 600;
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2; */
+}
+
+.item-3 {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: aquamarine;
+  font-size: 20px;
+  font-weight: 600;
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3; */
+  /* grid-column: 1 / span 2;
+  grid-row: 2 / span 2; */
+}
+
+.item-5 {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: azure;
+  font-size: 20px;
+  font-weight: 600;
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.item-9 {
+  text-align: center;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: burlywood;
+  font-size: 20px;
+  font-weight: 600;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.item > img {
+  width: 200px;
+  height: 200px;
+}
+
+table,
+th,
+td {
+  border: 1px solid blue;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  color: blueviolet;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: serif;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: bisque;
+}
