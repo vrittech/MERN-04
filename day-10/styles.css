@@ -1,0 +1,89 @@
+:root {
+  --primary: green;
+  --error: red;
+  --secondary: cadetblue;
+}
+
+h1 {
+  --primary: blue;
+  color: var(--primary);
+  background-color: var(--bg);
+  font-size: 50px;
+  font-weight: 600;
+  /* horizontal vertical blur color */
+  text-shadow: 4px 2px 10px var(--secondary), 2px 4px 5px var(--error);
+  /* transition: font-size 2s; */
+}
+
+/* h1:hover {
+  font-size: 70px;
+} */
+
+div {
+  --bg: red;
+  background-color: var(--primary);
+  width: 100px;
+  height: 100px;
+  /* box-shadow: 4px 2px 10px var(--secondary) inset, 2px 4px 10px var(--error); */
+  /* transition-property: width;
+  transition-duration: 2s; */
+  /* transition: width 2s, height 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 2s; */
+  /* animation-name: background-change;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 5; */
+  animation: background-change 10s 2s 5;
+  position: relative;
+}
+
+@keyframes background-change {
+  /* from {
+    background-color: var(--primary);
+  }
+  to {
+    background-color: blue;
+  } */
+  0% {
+    background-color: brown;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    background-color: chartreuse;
+    top: 0;
+    left: 200px;
+  }
+  50% {
+    background-color: coral;
+    top: 200px;
+    left: 200px;
+  }
+  75% {
+    background-color: crimson;
+    top: 200px;
+    left: 0;
+  }
+  100% {
+    background-color: black;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* div:hover {
+  width: 200px;
+  height: 200px;
+} */
+
+p {
+  font-size: 20px;
+  color: var(--primary);
+  column-count: 3;
+  /* column-rule-style: solid;
+  column-rule-color: var(--error);
+  column-rule-width: 5px; */
+  /* column-rule: 5px solid var(--error); */
+  column-gap: 100px;
+}
