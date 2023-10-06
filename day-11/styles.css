@@ -2,6 +2,14 @@
   --primary: #2260bf;
   --danger: #e11b22;
   --white: #fff;
+  --primary-bg: #f4f6f8;
+  --primary-gradient: linear-gradient(
+    to bottom right,
+    #342640,
+    #3b2f4c,
+    #393151,
+    #323c67
+  );
 }
 
 .container {
@@ -17,6 +25,8 @@
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
   padding: 15px 0;
   background-color: var(--primary);
 }
@@ -49,6 +59,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .tag {
@@ -96,6 +107,99 @@
 .section-1-content {
   text-align: center;
   margin: 0 80px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+.section-2 {
+  /* display: grid;
+  grid-template-columns: 60% 35%;
+  justify-content: space-between; */
+  display: flex;
+  gap: 40px;
+  background-color: var(--primary-bg);
+  height: 400px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.section-2-left {
+  background-image: url("./assets/section-1.gif");
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-2-left-title {
+  font-size: 32px;
+  color: white;
+  padding: 20px;
+}
+
+.section-2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  overflow: auto;
+}
+
+.section-2-right-content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.section-2-right-content:last-child {
+  border-bottom: none;
+}
+
+.section-2-right-content-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.section-2-right-content-title {
+  font-weight: 600;
+}
+
+.section-3-container {
+  background-image: var(--primary-gradient);
+}
+
+.section-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 300px 300px;
+  gap: 20px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.section-3-item {
+  background-image: url("./assets/section-1.gif");
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-3-item-1 {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.section-3-item-2 {
+  grid-area: 1 / 2 / span 2 / span 1;
+}
+
+.section-3-item-title {
+  font-size: 32px;
+  color: white;
+  padding: 20px;
 }
 
 .grid-container {
