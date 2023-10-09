@@ -13,7 +13,7 @@
 }
 
 .container {
-  margin: 0 150px;
+  margin: 0 200px;
 }
 
 .logo-wrapper {
@@ -136,13 +136,14 @@ hr {
   font-size: 32px;
   color: white;
   padding: 20px;
+  font-weight: 600;
 }
 
 .section-2-right {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 400px;
+  height: 350px;
   overflow: auto;
 }
 
@@ -230,4 +231,96 @@ hr {
   color: rgba(0, 0, 0, 0.48);
   font-weight: 600;
   margin-top: 5px;
+}
+
+@media only screen and (max-width: 300px) {
+  body {
+    background-color: rebeccapurple;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    margin: 0 50px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navbar-list {
+    gap: 10px;
+  }
+
+  .navbar-list-data {
+    font-size: 20px;
+  }
+
+  .section-1 {
+    gap: 10px;
+  }
+
+  .tag > span {
+    font-size: 14px;
+  }
+
+  .section-1-title {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .section-1-content {
+    margin: 0;
+  }
+
+  .section-2 {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .section-2-left {
+    min-height: 20vh;
+  }
+
+  .section-2-left-title {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .section-2-right {
+    height: 20vh;
+    overflow: auto;
+  }
+
+  .section-2-right-content {
+    column-gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .section-3-container {
+    background-image: var(--primary-gradient);
+  }
+
+  .section-3 {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .section-3-item {
+    height: 20vh;
+  }
+
+  .section-3-item-1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  .section-3-item-2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .section-3-item-title {
+    font-size: 20px;
+    padding: 10px;
+  }
 }
