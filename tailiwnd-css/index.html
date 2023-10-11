@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2260bf",
+              white: "#ffffff",
+              danger: "#e11b22",
+              "primary-bg": "#f4f6f8",
+            },
+            margin: {
+              50: "50px",
+              200: "200px",
+            },
+            padding: {
+              15: "15px",
+            },
+            backgroundImage: {
+              "section-2-image": "url('./assets/section-1.gif')",
+              "section-3-gradient":
+                "linear-gradient(to bottom right, #342640, #3b2f4c, #393151,#323c67)",
+            },
+          },
+          screens: {
+            large: "576px",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="mx-50 large:mx-200">
+      <img
+        class="w-[100px] large:w-[250px] py-15"
+        src="./assets/logo-main.png"
+        alt="Logo"
+      />
+    </header>
+
+    <nav class="sticky top-0 py-15 bg-primary">
+      <div class="mx-50 large:mx-200">
+        <ul class="flex gap-2.5 large:gap-[50px]">
+          <li class="text-white text-xl large:text-2xl font-semibold">
+            Home page
+          </li>
+          <li class="text-white text-xl large:text-2xl font-semibold">News</li>
+          <li class="text-white text-xl large:text-2xl font-semibold">
+            Business
+          </li>
+          <li class="text-white text-xl large:text-2xl font-semibold">
+            Lifestyle
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mx-50 large:mx-200 py-15">
+      <section class="flex flex-col gap-2.5 large:gap-5 mb-5">
+        <div class="flex justify-center">
+          <span class="bg-danger rounded text-sm large:text-lg text-white p-2.5"
+            >Special tag</span
+          >
+        </div>
+
+        <h2
+          class="text-center text-2xl large:text-5xl font-extrabold m-0 mobie:mx-20"
+        >
+          Lorem ipsum dolor sit
+        </h2>
+
+        <img
+          class="w-full"
+          src="./assets/section-1.gif"
+          alt="Lorem ipsum dolor sit"
+        />
+
+        <p class="text-center m-0 large:mx-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ex
+          voluptates dolorem ea hic nesciunt fugit, at in eaque natus nostrum,
+          doloribus itaque quae quas odio inventore culpa, nisi incidunt? Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ex
+          voluptates dolorem ea hic nesciunt fugit, at in eaque natus nostrum,
+          doloribus itaque quae quas odio inventore culpa, nisi incidunt?
+        </p>
+      </section>
+    </div>
+
+    <div class="mx-50 large:mx-200 py-15">
+      <section class="flex flex-col gap-2.5 large:gap-5 mb-5">
+        <div class="flex justify-center">
+          <span class="bg-danger rounded text-sm large:text-lg text-white p-2.5"
+            >Special tag</span
+          >
+        </div>
+
+        <h2
+          class="text-center text-2xl large:text-5xl font-extrabold m-0 mobie:mx-20"
+        >
+          Lorem ipsum dolor sit
+        </h2>
+
+        <img
+          class="w-full"
+          src="./assets/section-1.gif"
+          alt="Lorem ipsum dolor sit"
+        />
+
+        <p class="text-center m-0 large:mx-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ex
+          voluptates dolorem ea hic nesciunt fugit, at in eaque natus nostrum,
+          doloribus itaque quae quas odio inventore culpa, nisi incidunt? Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ex
+          voluptates dolorem ea hic nesciunt fugit, at in eaque natus nostrum,
+          doloribus itaque quae quas odio inventore culpa, nisi incidunt?
+        </p>
+      </section>
+    </div>
+
+    <div class="mx-50 large:mx-200"><hr /></div>
+
+    <section
+      class="mx-50 large:mx-200 flex gap-10 large:gap-5 bg-primary-bg h-[400px] p-[30px] mb-5 flex-wrap large:flex-nowrap"
+    >
+      <div class="flex items-end bg-section-2-image bg-cover min-h-[20vh]">
+        <h2
+          class="text-xl large:text-[32px] p-2.5 large:p-5 font-semibold text-white"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit
+        </h2>
+      </div>
+
+      <div class="flex flex-col gap-5 h-[20vh] large:h-[350px] overflow-auto">
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div
+          class="flex justify-between gap-x-5 pb-2.5 border-solid border-b border-x-gray-500"
+        >
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+
+        <div class="flex justify-between gap-x-5 pb-2.5">
+          <img
+            src="./assets/section-1.gif"
+            class="w-[50px] h-[50px] rounded-[5px]"
+            alt="image-1"
+          />
+          <h3 class="font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-section-3-gradient">
+      <div class="mx-50 large:mx-200">
+        <section
+          class="grid grid-cols-1 large:grid-cols-3 grid-rows-4 large:grid-rows-2 gap-2.5 large:gap-5 py-[15px] mb-5"
+        >
+          <div
+            class="bg-section-2-image bg-cover flex items-end row-start-1 large:row-end-3 large:col-start-1 large:col-end-2 h-[20vh] large:h-auto"
+          >
+            <h3 class="text-white p-5 text-xl large:text-[32px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </h3>
+          </div>
+          <div
+            class="bg-section-2-image bg-cover flex items-end large:row-start-1 large:row-end-3 large:col-start-2 large:col-end-3 h-[20vh] large:h-auto"
+          >
+            <h3 class="text-white p-5 text-xl large:text-[32px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </h3>
+          </div>
+          <div
+            class="bg-section-2-image bg-cover flex items-end h-[20vh] large:h-auto"
+          >
+            <h3 class="text-white p-5 text-xl large:text-[32px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </h3>
+          </div>
+          <div
+            class="bg-section-2-image bg-cover flex items-end h-[20vh] large:h-auto"
+          >
+            <h3 class="text-white p-5 text-xl large:text-[32px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit
+            </h3>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

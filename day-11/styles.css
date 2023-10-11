@@ -233,12 +233,6 @@ hr {
   margin-top: 5px;
 }
 
-@media only screen and (max-width: 300px) {
-  body {
-    background-color: rebeccapurple;
-  }
-}
-
 @media screen and (max-width: 576px) {
   .container {
     margin: 0 50px;
@@ -322,5 +316,30 @@ hr {
   .section-3-item-title {
     font-size: 20px;
     padding: 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .grid-item-1,
+  .grid-item-2,
+  .grid-item-3,
+  .grid-item-4 {
+    display: none;
+  }
+
+  .footer-nav {
+    padding: 20px 0;
+  }
+
+  .footer-nav-title {
+    font-size: 18px;
+  }
+
+  .footer-nav-list-data {
+    font-size: 14px;
+    margin-top: 5px;
   }
 }
