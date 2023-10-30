@@ -1,94 +1,49 @@
-// // array :
+// Array
+var a = [1, 2, 3];
+a = ["Apple", "Ball", "Cat"];
+a = [1, "Apple", 2, "Ball"];
 
-// // let names = ["bibek", "subedi", "bikki", "mango"];
+console.log("a: ", a);
+console.log("First item: ", a[0]);
+console.log("Length of array: ", a.length);
+console.log("Last time: ", a[a.length - 1]);
 
-// // length = 4
-// // names[4] = undefined
+a.push(3);
+console.log("Updated a: ", a);
+a.push("Cat");
+console.log("Before: ", a);
+a.pop();
+console.log("After: ", a);
 
-// // console.log(names);
+a.unshift(0);
+console.log("Updated a: ", a);
+a.shift();
+console.log("Updated a: ", a);
+a[1] = "Avocado";
+console.log("Updated a: ", a);
 
-// //
-// // let length = names.length;
-// // console.log(length);
+console.log(typeof a);
+console.log("Is an array?", Array.isArray(a));
+console.log("Is an array?", a instanceof Array);
 
-// // // let lastItem = names[8];
-// // // console.log(lastItem);
+a = [3, 1, 4, 2];
+a.sort((a, b) => a - b);
+console.log("Ascending sort: ", a);
+a.sort((a, b) => b - a);
+console.log("Descending sort: ", a);
 
-// // console.log(names[names.length]);
+a = [1, 2, 3];
+var b = [4, 5, 6];
+var c = a.concat(b);
+console.log("c: ", c);
 
-// let fruits = ["mango", "banana", "apple", "orange", "watermelon"];
-// console.log(fruits);
+var array = [4, 1, 6, 3, 5, 2];
+var result = array.find((a) => a === 6);
+console.log("Find: ", result);
 
-// console.log("fruits length", fruits.length); //5
-
-// fruits.pop(); // deletes last item from the array
-
-// console.log(fruits); // ["mango", "banana", "apple", "orange"]
-// console.log(fruits.length); // 4
-
-// fruits.push("Pineapple"); // ["mango", "banana", "apple", "orange", "Pineapple"]
-// console.log(fruits);
-
-// console.log(fruits.length); // 5
-
-// // fruits.shift(); //["banana", "apple", "orange", "Pineapple"]
-// // console.log(fruits);
-
-// // fruits.unshift("Guva");
-// // ["Guva", "banana", "apple", "orange", "Pineapple"];
-// // console.log(fruits);
-
-// console.clear()
-// console.log(fruits)
-// fruits.splice(0,2)
-
-// // console.log(fruits)
-// // // console.clear()
-
-// // // console.log(fruits)
-
-// // // let sliced = fruits.slice(0,3)
-// // // console.log(sliced)
-
-//Array lengthArray
-// Array pop()
-// Array push()
-// Array shift()
-// Array unshift()
-// Array splice()
-// Array slice()
-// toString()
-
-// let names = ["bibek", "ram", "shyam", "ravi"];
-// console.log(names);
-
-// console.log(names.toString());
-
-// // Array join()
-// let names = ["bibek", "ram", "shyam", "ravi"];
-// console.log(names.join(" and "));
-
-// Array delete()
-// let names = ["bibek", "ram", "shyam", "ravi"];
-// console.log(names);
-
-// console.log(delete names[0]);
-// console.log(names);
-// console.log(names[0]);
-
-// // // Array concat()
-// let names1 = ["binod", "shyam", "kushal"];
-// let names2 = ["bibek", "bishal", "bikki"];
-
-// let names = names1.concat(names2);
-// console.log(names);
-// console.clear();
-
-// // Array flat()
-
-// let array = [
-//   ["+977", "+91"],
-//   [9847356004, 9861601174],
-// ];
-
-// console.log(array.flat());
+result = array.map((a) => a * 2);
+console.log("Map: ", result);
+result = array.filter((a) => a % 2 !== 0);
+console.log("Filter: ", result);
+result = array.reduce((previous, current) => previous + current, 0);
+console.log("Reduce: ", result);
