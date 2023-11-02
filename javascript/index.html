@@ -16,12 +16,61 @@
     <button onclick="document.getElementById('heading').style.color='red'">
       Change color
     </button>
-    <button onclick="document.write('10')">10</button>
+    <button id="10">10</button>
 
-    <input />
     <p>5+5=<span id="sum"></span></p>
     <button onclick="generateSum()">Sum</button>
 
+    <div id="div">
+      <p id="paragraph">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae,
+        asperiores. Dolore mollitia dolores quod ipsa repellendus esse quaerat
+        perferendis alias ullam qui animi saepe doloremque veniam, maxime
+        asperiores labore magnam?
+      </p>
+    </div>
+
+    <button onclick="addPTag()">Add p tag</button>
+    <button onclick="removePTag()">Remove p tag</button>
+    <button onclick="replacePTag()">Replace p tag</button>
+
+    <form
+      name="registerUser"
+      action="./index.html"
+      onsubmit="return validateForm()"
+      method="get"
+    >
+      <label for="fullName">Full name</label>
+      <input type="text" placeholder="John Doe" name="fullName" />
+      <span id="fullNameValidationMessage"></span>
+      <br />
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="example@gmail.com" />
+      <span id="emailValidationMessage"></span>
+      <br />
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password const document= document.getRootNode();"
+        placeholder="password"
+      />
+      <span id="passwordValidationMessage"></span>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <div id="web-api"></div>
+
+    <button onclick="saveToStorage()">Save to web storage</button>
+    <button onclick="getFromStorage()">Get from storage</button>
+    <button onclick="clearStorage()">Clear storage</button>
+
+    <button onclick="getHistory()">History</button>
+    <button onclick="goBack()">Go Back</button>
+
+    <div id="node"></div>
+    <button onclick="addNewNode()">Add new node</button>
     <!-- <script src="./index.js"></script> -->
     <!-- <script src="./array.js"></script> -->
     <!-- <script src="./object.js"></script> -->
@@ -30,8 +79,17 @@
     <!-- <script src="./es6.js"></script> -->
     <!-- <script src="./scope.js"></script> -->
     <!-- <script src="./oop.js"></script> -->
-    <script src="./async.js"></script>
+    <!-- <script src="./async.js"></script> -->
     <!-- <script src="./event-loop.js"></script> -->
     <!-- <script src="./example.js"></script> -->
+    <!-- <script src="./form.js"></script> -->
+    <!-- <script src="./node.js"></script> -->
+    <script src="./web-api.js"></script>
+
+    <!-- <script>
+      document
+        .getElementById("10")
+        .addEventListener("click", () => document.write(10));
+    </script> -->
   </body>
 </html>

@@ -1,0 +1,10 @@
+{
+  "name": "John Doe",
+  "age": 20,
+  "healthy": true,
+  "cars": ["Mustang", "Nexon"],
+  "location": {
+    "city": "Kathmandu",
+    "country": "Nepal"
+  }
+}

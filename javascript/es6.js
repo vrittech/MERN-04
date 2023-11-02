@@ -47,3 +47,23 @@ const g = ({ firstName, lastName, ...rest }, h) => ({
   ...h,
 });
 console.log("result: ", g(f, h));
+
+const data = {
+  name: "John Doe",
+  age: 20,
+  healthy: true,
+  cars: ["Mustang", "Nexon"],
+  location: {
+    city: "Kathmandu",
+    country: "Nepal",
+  },
+  birthDate: new Date(),
+  func: function func1() {
+    console.log("func1");
+  },
+};
+
+const json = JSON.stringify(data);
+console.log("Stringify", json);
+const parsed = JSON.parse(json);
+console.log("Parse", parsed);
