@@ -8,15 +8,14 @@ import { Component, useState } from "react";
 // 6. setCount runs --> Request re-render
 // 7. Before re-render, state is updated
 // 8. useState returns new value of state variable on re-render
-export const LearnState = () => {
-  const [count, setCount] = useState(0);
+export const LearnState = ({ initialCount }) => {
+  const [count, setCount] = useState(initialCount);
   const [user, setUser] = useState({ name: "John Doe", age: 10 });
   const [cars, setCars] = useState(["Mustang", "Porsche"]);
 
   console.log("User", user);
 
-  const handleCount = () => {
-    console.log("Button clicked");
+  const handleCount = (event) => {
     setCount(count + 1);
     // setCount(count + 1);
     setCount((prev) => prev + 1);
