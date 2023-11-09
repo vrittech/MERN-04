@@ -1,40 +1,23 @@
-import { useReducer, useRef, useState } from "react";
-import { Form, LearnState, RenderList, Stopwatch } from "./components";
+import { useState } from "react";
+import { LearnReducer } from "./components";
+
+// Primitive data type
+// Object, Array -- Heap
+// 1st state update { name: "Julius Ceaser", age: 30 } --> abc
+// 2nd state update { name: "Julius Ceaser", age: 30 } --> abd
 
 function App() {
-  const [style, setStyle] = useState({ color: "red" });
+  const [user, setUser] = useState({ name: "John Doe", age: 10 });
 
-  // const onSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log("Button Clicked");
-  // };
-
-  const ref = useRef("apple");
-  console.log("ref", ref.current);
-
-  let fruit = "apple";
-  console.log("fruit", fruit);
-
-  const changeColor = () => {
-    setStyle({ color: "yellow" });
-    fruit = "banana";
-    console.log("fruit", fruit);
-    ref.current = "banana";
+  const handleClick = () => {
+    setUser({ name: "Julius Ceaser", age: 30 });
   };
-
-  // const appleRef = useRef();
-
-  // const changeColor = () => {
-  //   appleRef.current.style = "color: red";
-  //   fruit = "banana";
-  // };
 
   return (
     <>
-      <p /* ref={appleRef} */ style={style}>{ref.current}</p>
-      <button onClick={changeColor}>Change Text color</button>
-
-      <Stopwatch />
+      <LearnReducer />
+      {/* <LearnMemoization user={user} /> */}
+      {/* <Stopwatch /> */}
       {/* <LearnState initialCount={1} /> */}
       {/* <Form onSubmit={onSubmit} /> */}
       {/* <RenderList
@@ -46,6 +29,7 @@ function App() {
           { name: "Joe Doe", age: 40 },
         ]}
       /> */}
+      <button onClick={handleClick}>Change name</button>
     </>
   );
 }
