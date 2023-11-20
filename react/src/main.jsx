@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "./routes";
-import { Error, Home, User } from "./components";
+import { AboutUs, Error, Home, User } from "./components";
 import {
   createUserAction,
   getUserByIdLoader,
@@ -28,11 +28,7 @@ const router = createBrowserRouter([
           { index: true, element: <Home /> },
           {
             path: "/about-us",
-            element: (
-              <div>
-                <h1>About us</h1>
-              </div>
-            ),
+            element: <AboutUs />,
           },
           {
             path: "/contact-us",

@@ -1,14 +1,25 @@
+import { useEffect } from "react";
 import {
   Form,
   NavLink,
   Outlet,
   useLoaderData,
+  useLocation,
   useNavigation,
 } from "react-router-dom";
 
 export const Root = () => {
   const { userList } = useLoaderData();
   const navigation = useNavigation();
+  const location = useLocation();
+
+  console.log(location.search);
+
+  useEffect(() => {
+    if (location.pathname === "/about-us") {
+      console.log("In about us page");
+    }
+  }, [location.pathname]);
 
   return (
     <>
