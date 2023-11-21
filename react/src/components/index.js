@@ -1,5 +1,6 @@
 export * from "./about-us";
 export * from "./button";
+export * from "./card";
 export * from "./error";
 export * from "./home";
 export * from "./nav-item";

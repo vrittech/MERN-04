@@ -1,0 +1,33 @@
+.card {
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+}
+
+.tag > span {
+  color: white;
+  padding: 10px;
+  background: red;
+  border-radius: 4px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+}

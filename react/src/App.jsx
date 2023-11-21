@@ -2,8 +2,10 @@
 // light/dark --> light --> props
 
 import { useState } from "react";
-import { Navbar } from "./components";
+import { Card, Navbar } from "./components";
 import { ThemeContext } from "./contexts/theme";
+
+// import "./App.css";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -14,7 +16,9 @@ function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <Navbar changeTheme={changeTheme} />
+      {/* <Navbar changeTheme={changeTheme} /> */}
+
+      <Card />
     </ThemeContext.Provider>
   );
 }
