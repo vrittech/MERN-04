@@ -1,13 +1,39 @@
-import { useTodoList } from "../hooks";
+import { useMutation, useQuery } from "@tanstack/react-query";
+// import { useTodoList } from "../hooks";
 import { $axios } from "../lib";
+import { queryClient } from "../App";
 
-const endpoint = "https://jsonplaceholder.typicode.com/todos";
+// const endpoint = "https://jsonplaceholder.typicode.com/todos";
 
 export const TodoList = () => {
-  const { todoList } = useTodoList();
+  const postId = 2;
+  const { data, error, isPending } = useQuery({
+    queryKey: ["todos"],
+    queryFn: () => $axios.get("todos").then((data) => data),
+  });
 
-  if (todoList.isLoading) return <p>Loading...</p>;
-  if (todoList.fetchFailed) return <p>{todoList.error}</p>;
+  const { data: commentList } = useQuery({
+    queryKey: ["comments", postId],
+    queryFn: () =>
+      $axios.get("comments", { params: { postId } }).then((data) => data),
+  });
+  console.log("Comment List", commentList);
+
+  const mutation = useMutation({
+    mutationFn: (todo) => $axios.post("/todos", todo).then((data) => data),
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries({ queryKey: ["todos"] });
+    },
+  });
+
+  // const { todoList } = useTodoList();
+
+  // if (todoList.isLoading) return <p>Loading...</p>;
+  // if (todoList.fetchFailed) return <p>{todoList.error}</p>;
+
+  if (error) return <p>{error.message}</p>;
+  if (isPending) return <p>Loading...</p>;
 
   const createTodo = () => {
     // fetch(endpoint, {
@@ -25,10 +51,11 @@ export const TodoList = () => {
     //     console.log("Error", err);
     //   });
 
-    $axios
-      .post("/todos", { title: "Learn react", completed: false, userId: 5 })
-      .then((data) => console.log("Data", data))
-      .catch((err) => console.log("Error", err.message));
+    // $axios
+    //   .post("/todos", { title: "Learn react", completed: false, userId: 5 })
+    //   .then((data) => console.log("Data", data))
+    //   .catch((err) => console.log("Error", err.message));
+    mutation.mutate({ title: "Learn react", completed: false, userId: 5 });
   };
 
   return (
@@ -45,7 +72,7 @@ export const TodoList = () => {
       </div>
 
       <div className="flex flex-row flex-wrap gap-4 mt-4">
-        {todoList.data.map((todo) => (
+        {data.map((todo) => (
           <div
             key={todo.id}
             className="rounded border-2 border-solid border-black p-1"
