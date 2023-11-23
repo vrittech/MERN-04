@@ -5,6 +5,7 @@ export * from "./error";
 export * from "./home";
 export * from "./nav-item";
 export * from "./navbar";
+export * from "./posts";
 export * from "./todos";
 export * from "./user";
 export * from "./wrapper";

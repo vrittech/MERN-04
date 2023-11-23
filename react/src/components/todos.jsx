@@ -6,25 +6,54 @@ import { queryClient } from "../App";
 // const endpoint = "https://jsonplaceholder.typicode.com/todos";
 
 export const TodoList = () => {
-  const postId = 2;
-  const { data, error, isPending } = useQuery({
+  const postId = 1;
+  const { data, error, /* isPending, */ status } = useQuery({
     queryKey: ["todos"],
     queryFn: () => $axios.get("todos").then((data) => data),
+    // refetchOnWindowFocus: false,
+    // refetchInterval: 3 * 1000,
+  });
+
+  const { data: post } = useQuery({
+    queryKey: ["post", postId],
+    queryFn: ({ queryKey }) => {
+      const [, postId] = queryKey;
+      return $axios.get(`posts/${postId}`).then((data) => data);
+    },
   });
 
   const { data: commentList } = useQuery({
     queryKey: ["comments", postId],
-    queryFn: () =>
-      $axios.get("comments", { params: { postId } }).then((data) => data),
+    queryFn: ({ queryKey }) => {
+      // page, pageSize, sort, order
+      const [, postId] = queryKey;
+      return $axios
+        .get("comments", { params: { postId } })
+        .then((data) => data);
+    },
+    enabled: !!post?.id,
   });
   console.log("Comment List", commentList);
 
   const mutation = useMutation({
-    mutationFn: (todo) => $axios.post("/todos", todo).then((data) => data),
-    onSuccess: () => {
-      // Invalidate and refetch
-      queryClient.invalidateQueries({ queryKey: ["todos"] });
+    mutationFn: (todo) => $axios.post("/todos", { id: 201, ...todo }),
+    onMutate: async (newTodo) => {
+      const todos = queryClient.getQueryData(["todos"]);
+      queryClient.setQueryData(["todos"], (old) => [
+        { id: 201, ...newTodo },
+        ...old,
+      ]);
+      return { todos };
     },
+    onError: (err, newTodo, context) => {
+      queryClient.setQueryData(["todos"], context.todos);
+    },
+    // onSuccess: (result, variables, context) => {
+    //   console.log(result, variables, context);
+    //   // Invalidate and refetch
+    //   // queryClient.invalidateQueries({ queryKey: ["todos"] });
+    //   queryClient.setQueryData(["todos"], (old) => [...old, result]);
+    // },
   });
 
   // const { todoList } = useTodoList();
@@ -32,8 +61,8 @@ export const TodoList = () => {
   // if (todoList.isLoading) return <p>Loading...</p>;
   // if (todoList.fetchFailed) return <p>{todoList.error}</p>;
 
-  if (error) return <p>{error.message}</p>;
-  if (isPending) return <p>Loading...</p>;
+  if (status === "error") return <p>{error.message}</p>;
+  if (status === "pending") return <p>Loading...</p>;
 
   const createTodo = () => {
     // fetch(endpoint, {
