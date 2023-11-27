@@ -12,29 +12,30 @@
         <h1>Tic-Tac-Toe</h1>
         <p>Player 1(X), Player 2(O)</p>
         <p id="turn">Player 1 turn</p>
+        <p id="winner"></p>
       </div>
 
       <div class="parent">
         <div class="child-1">
-          <input id="input-1" onclick="myFunc1()" readonly />
-          <input id="input-2" onclick="myFunc2()" readonly />
-          <input id="input-3" onclick="myFunc3()" readonly />
+          <input id="input-1" onclick="myFunc1(); getWinner();" readonly />
+          <input id="input-2" onclick="myFunc2(); getWinner();" readonly />
+          <input id="input-3" onclick="myFunc3(); getWinner();" readonly />
         </div>
 
         <div class="child-2">
-          <input id="input-4" onclick="myFunc4()" readonly />
-          <input id="input-5" onclick="myFunc5()" readonly />
-          <input id="input-6" onclick="myFunc6()" readonly />
+          <input id="input-4" onclick="myFunc4(); getWinner();" readonly />
+          <input id="input-5" onclick="myFunc5(); getWinner();" readonly />
+          <input id="input-6" onclick="myFunc6(); getWinner();" readonly />
         </div>
 
         <div class="child-3">
-          <input id="input-7" onclick="myFunc7()" readonly />
-          <input id="input-8" onclick="myFunc8()" readonly />
-          <input id="input-9" onclick="myFunc9()" readonly />
+          <input id="input-7" onclick="myFunc7(); getWinner();" readonly />
+          <input id="input-8" onclick="myFunc8(); getWinner();" readonly />
+          <input id="input-9" onclick="myFunc9(); getWinner();" readonly />
         </div>
       </div>
 
-      <button>Reset</button>
+      <button onclick="reset()">Reset</button>
     </div>
 
     <script src="./index.js" />
