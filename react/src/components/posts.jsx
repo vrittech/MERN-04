@@ -1,6 +1,5 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { queryClient } from "../App";
-import { $axios } from "../lib";
+import { $axios, queryClient } from "../lib";
 
 export const PostList = () => {
   const { data, error, isPending, isError } = useQuery({

@@ -1,7 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 // import { useTodoList } from "../hooks";
-import { $axios } from "../lib";
-import { queryClient } from "../App";
+import { $axios, queryClient } from "../lib";
 
 // const endpoint = "https://jsonplaceholder.typicode.com/todos";
 
